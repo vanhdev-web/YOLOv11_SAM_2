@@ -30,14 +30,19 @@ The idea is to combine two solutions proposed by ultralytics: object counting an
 ![image](demo/train_batch/train_batch2.jpg)
 <div align="center">*batch_train*</div>
 
-![image](demo/graph/BoxF1_curve.png)
-![image](demo/graph/BoxP_curve.png)
-![image](demo/graph/BoxPR_curve.png)
-![image](demo/graph/BoxR_curve.png)
+<p align="center">
+  <img src="demo/graph/BoxF1_curve.png" alt="BoxF1" width="45%">
+  <img src="demo/graph/BoxP_curve.png" alt="BoxP" width="45%">
+</p>
+<p align="center">
+  <img src="demo/graph/BoxPR_curve.png" alt="BoxPR" width="45%">
+  <img src="demo/graph/BoxR_curve.png" alt="BoxR" width="45%">
+</p>
 <div align="center">*graph*</div>
-
-![image](demo/graph/confusion_matrix.png)
-![image](demo/graph/confusion_matrix_normalized.png)
+<p align="center">
+  <img src="demo/graph/confusion_matrix.png" alt="confusion_matrix" width="48%">
+  <img src="demo/graph/confusion_matrix_normalized.png" alt="confusion_matrix_normalized" width="48%">
+</p>
 <div align="center">*confusion matrix*</div>
 
 
