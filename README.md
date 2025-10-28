@@ -2,11 +2,13 @@
 
 ## Project Overview
 
-This project combines the power of YOLOv11 for object detection and counting with the Segment Anything Model (SAM2) for automatic image labeling and vehicle classification. It aims to automate the process of generating labeled datasets for object detection tasks, particularly in scenarios involving vehicle counting in regions.
+This project combines the power of YOLOv11 for object detection and counting with the Segment Anything Model (SAM2) for automatic image labeling and vehicle classification. 
 
-**Repository URL:** [https://github.com/vanhdev-web/YOLOv11_SAM_2](https://github.com/vanhdev-web/YOLOv11_SAM_2)
 
-**Default Branch:** `main`
+## Idea and Solution
+The idea is to combine two solutions proposed by ultralytics: object counting and object counting in region, in order to overcome the limitations of each individual method. specifically, object counting can only count the total number of objects in a single selected area, while object counting in region allows for region-based segmentation but only counts the objects currently present in each region. The proposed approach aims to count the number of vehicles passing through each individual lane, while integrating the classification capability of SAM2.
+![demo](demo/video_demo/demo.gif)
+<div align="center">*video demo*</div>
 
 ## Features and Functionality
 
@@ -18,6 +20,28 @@ This project combines the power of YOLOv11 for object detection and counting wit
 *   **Visual Annotations:** Displays bounding boxes, object counts, and region boundaries on the video stream.
 *   **Configurable Regions:** Defines counting regions as polygons with configurable colors and names.
 *   **Directional Counting:**  Can be configured to count objects moving "IN" or "OUT" of a region, or in "LEFT LANE" or "RIGHT LANE", depending on the region's orientation and object movement.
+
+## SAM2 Training result
+![image](demo/train_reuslt/results.png)
+<div align="center">*training_result*</div>
+
+![image](demo/train_batch/train_batch0.jpg)
+![image](demo/train_batch/train_batch1.jpg)
+![image](demo/train_batch/train_batch2.jpg)
+<div align="center">*batch_train*</div>
+
+![image](demo/graph/BoxF1_curve.png)
+![image](demo/graph/BoxP_curve.png)
+![image](demo/graph/BoxPR_curve.png)
+![image](demo/graph/BoxR_curve.png)
+<div align="center">*graph*</div>
+
+![image](demo/graph/confusion_matrix.png)
+![image](demo/graph/confusion_matrix_normalized.png)
+<div align="center">*confusion matrix*</div>
+
+
+
 
 ## Technology Stack
 
@@ -196,9 +220,6 @@ This script demonstrates how to use YOLOv11 for object detection and counting wi
     *   `show_in`: Whether to show "IN" counts.
     *   `show_out`: Whether to show "OUT" counts.
 
-## API Documentation (N/A)
-
-This project does not expose a formal API. The scripts are designed to be run directly for video processing and dataset generation. However, the core logic for object counting and region definition could be refactored into reusable functions for integration into other projects.
 
 ## Contributing Guidelines
 
